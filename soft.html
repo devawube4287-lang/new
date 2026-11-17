@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome Back</title>
+	<style>
+		* { box-sizing: border-box; }
+
+		body {
+			min-height: 100vh;
+			margin: 0;
+			display: grid;
+			place-items: center;
+			padding: 24px;
+			color: #20243a;
+			font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+			background: radial-gradient(circle at 15% 15%, #e8eaff 0, transparent 35%),
+									radial-gradient(circle at 85% 85%, #fbe4f3 0, transparent 35%), #f7f8fc;
+		}
+
+		.login-card {
+			width: min(100%, 430px);
+			padding: 42px;
+			border: 1px solid rgba(255, 255, 255, .8);
+			border-radius: 24px;
+			background: rgba(255, 255, 255, .88);
+			box-shadow: 0 24px 70px rgba(48, 53, 105, .13);
+			backdrop-filter: blur(12px);
+		}
+
+		.brand-mark {
+			width: 48px;
+			height: 48px;
+			display: grid;
+			place-items: center;
+			margin-bottom: 28px;
+			border-radius: 15px;
+			color: white;
+			font-size: 23px;
+			background: linear-gradient(135deg, #7167f8, #a45df2);
+			box-shadow: 0 9px 20px rgba(113, 103, 248, .3);
+		}
+
+		h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: -1px; }
+		.subtitle { margin: 0 0 30px; color: #777b91; font-size: 15px; }
+		.field { margin-bottom: 19px; }
+		label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 650; }
+
+		input {
+			width: 100%;
+			height: 50px;
+			padding: 0 15px;
+			border: 1px solid #e4e6ef;
+			border-radius: 11px;
+			outline: none;
+			color: #20243a;
+			font: inherit;
+			background: #fff;
+			transition: border-color .2s, box-shadow .2s;
+		}
+
+		input::placeholder { color: #a4a7b6; }
+		input:focus { border-color: #8178f5; box-shadow: 0 0 0 4px rgba(129, 120, 245, .13); }
+
+		.form-options {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+			margin: 4px 0 24px;
+			font-size: 13px;
+		}
+
+		.remember { display: flex; align-items: center; gap: 8px; color: #686d82; }
+		.remember input { width: 15px; height: 15px; margin: 0; accent-color: #7167f8; }
+		a { color: #6d63ec; text-decoration: none; font-weight: 600; }
+		a:hover { text-decoration: underline; }
+
+		button {
+			width: 100%;
+			height: 50px;
+			border: 0;
+			border-radius: 11px;
+			color: white;
+			font: inherit;
+			font-weight: 700;
+			cursor: pointer;
+			background: linear-gradient(100deg, #7167f8, #925fe9);
+			box-shadow: 0 8px 18px rgba(113, 103, 248, .25);
+			transition: transform .2s, box-shadow .2s;
+		}
+
+		button:hover { transform: translateY(-2px); box-shadow: 0 11px 22px rgba(113, 103, 248, .32); }
+		button:focus-visible, a:focus-visible { outline: 3px solid #b9b4ff; outline-offset: 3px; }
+		.signup { margin: 24px 0 0; color: #777b91; text-align: center; font-size: 14px; }
+
+		@media (max-width: 480px) {
+			.login-card { padding: 32px 24px; }
+			h1 { font-size: 27px; }
+		}
+	</style>
+</head>
+<body>
+	<main class="login-card">
+		<div class="brand-mark" aria-hidden="true">✦</div>
+		<h1>Welcome back</h1>
+		<p class="subtitle">Sign in to continue to your account.</p>
+
+		<form action="#" method="post">
+			<div class="field">
+				<label for="email">Email address</label>
+				<input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+			</div>
+			<div class="field">
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+			</div>
+			<div class="form-options">
+				<label class="remember"><input type="checkbox" name="remember"> Remember me</label>
+				<a href="#forgot-password">Forgot password?</a>
+			</div>
+			<button type="submit">Sign in</button>
+		</form>
+
+		<p class="signup">New here? <a href="#sign-up">Create an account</a></p>
+	</main>
+</body>
+</html>
